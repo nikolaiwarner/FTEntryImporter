@@ -1,0 +1,65 @@
+= breadcrumb [["Entries", administration_data_models_path], "Entry Importer"]
+
+- extension_point 'dashboard/entry_importer/left_column' do 
+
+  %h3
+    Upload a CSV file to import as entries. 
+    %br
+    Make sure the first row values equal the entry type's field names for each column.
+
+  - form_for :entry_importer, :url => administration_entry_importer_import_path, :html => { :multipart => true } do |f|
+    .form_container
+    
+      .form_item
+        .title
+          = f.label :asset, 'Select A CSV File:'
+        .field 
+          = f.file_field :file
+    
+    
+      .form_item
+        .title
+          = f.label :data_model_id, 'Entry Type'
+        .field  
+          = collection_select(:entry_importer, :data_model_id, @data_models, :id, :name)
+
+      .form_item
+        .title
+          = f.label :name_field, 'Column Name of Entry Name Field (Required)'
+        .field 
+          = f.text_field :name_field
+          
+      .form_item
+        .title
+          = f.label :slug_field, 'Column Name of Entry Slug Field (Required)'
+        .field 
+          = f.text_field :slug_field
+      
+      .form_item
+        .title
+          = f.label :published_at_field, 'Column Name of Entry Published At Field'
+        .field 
+          = f.text_field :published_at_field
+          
+      .form_item
+        .title
+          = f.label :unpublished_at_field, 'Column Name of Entry Unpublished At Field'
+        .field 
+          = f.text_field :unpublished_at_field
+
+      .form_item
+        .title
+          = f.label :user, 'Column Name of Entry User ID Field'
+        .field 
+          = f.text_field :user
+
+          
+      .form_item
+        .field
+          = f.submit 'Import'
+          
+
+    
+
+- content_for :secondary do
+  #secondaryContent
