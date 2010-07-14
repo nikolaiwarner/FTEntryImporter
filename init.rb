@@ -9,7 +9,6 @@ ViewExtender.register(
   :bottom,
   'dashboard/entry/index/right_column',
   :file => "#{File.dirname(__FILE__)}/app/views/administration/entry_importer/_task_link.haml"
-  #:partial => "administration/entry_importer/_task_link.haml"
 )
 
 ViewExtender.register(
@@ -17,5 +16,4 @@ ViewExtender.register(
   :bottom,
   'dashboard/data_model/index/right_column',
   :file => "#{File.dirname(__FILE__)}/app/views/administration/entry_importer/_task_link.haml"
-  #:partial => "administration/entry_importer/_task_link.haml"
 )

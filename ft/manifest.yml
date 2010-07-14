@@ -1,8 +1,8 @@
 filename:           entry_importer
-title:              Entry Importer
+title:              Entry Importer for Finethread
 version:            1.0
-description:        Imports values from a CSV file into Data Entries.
+description:        Imports values from a CSV file into Finethread Data Entries.
 authors:            ['Nikolai Warner']
-min_rh_version:     0.3.0
+min_ft_version:     0.3.0
 homepage:           'http://fineslacks.com'
 update_url:         ''

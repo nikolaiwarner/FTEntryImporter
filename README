@@ -1,9 +1,8 @@
-EntryImporter
-=============
+EntryImporter for Finethread
+============================
 
-Imports values from a CSV file into Data Entries.
+Imports values from a CSV file into Finethread Data Entries.
 
-Make sure the first row values equal the entry type's field names for each column.
-
+Be sure to craft the first row values to equal the entry type's field names for each column.
 
 Copyright (c) 2010 Nikolai Warner, released under the MIT license
